@@ -1,31 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drew Schwedelson</title>
-<style>
-body { font-family: system-ui, -apple-system, sans-serif; max-width: 680px; margin: 60px auto; padding: 0 20px; line-height: 1.6; color: #222; }
-h1 { margin-bottom: 0; }
-.sub { color: #666; margin-top: 4px; }
-h2 { border-bottom: 1px solid #ddd; padding-bottom: 4px; margin-top: 32px; }
-a { color: #0b6e4f; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drew Schwedelson | Finance @ Tulane</title>
+  <meta name="description" content="Personal website of Drew Schwedelson, Finance student at Tulane University.">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply saved or system theme before paint to avoid a flash
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
-<h1>Drew Schwedelson</h1>
-<p class="sub">Finance major at Tulane University &middot; Entrepreneurial Business minor &middot; AI certificate</p>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<h2>About Me</h2>
-<p>I'm a sophomore at Tulane interested in entrepreneurship, finance, and how AI is changing business.</p>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="logo" href="#top">DS</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <span class="icon" aria-hidden="true">🌙</span>
+      </button>
+    </nav>
+  </header>
 
-<h2>Projects</h2>
-<ul>
-<li><strong>NextStep</strong> &ndash; a college admissions mentorship platform (<a href="https://nextstepmentor.io">nextstepmentor.io</a>)</li>
-<li><strong>Golden Rectangle Club (GRC)</strong> &ndash; an outdoor fitness organization I co-founded</li>
-</ul>
+  <main id="main">
+    <!-- HERO -->
+    <section id="top" class="hero container">
+      <div class="avatar" aria-hidden="true">DS</div>
+      <div>
+        <p class="eyebrow">Tulane University · Freeman School of Business</p>
+        <h1>Drew Schwedelson</h1>
+        <p class="tagline">Finance student and entrepreneur exploring how AI is changing business.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#experience">See my work</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
 
-<h2>Contact</h2>
-<p>Find me on <a href="https://github.com/dschwedelson">GitHub</a>.</p>
+    <!-- ABOUT -->
+    <section id="about" class="section container reveal">
+      <h2>About</h2>
+      <p>
+        I'm a sophomore at Tulane University majoring in Finance, with a minor in
+        Entrepreneurial Business and a certificate in Artificial Intelligence. I like building
+        things from the ground up, from student organizations to early-stage startup ideas,
+        and I'm especially interested in where finance, entrepreneurship, and AI meet.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section container reveal">
+      <h2>Experience &amp; Activities</h2>
+      <div class="cards">
+        <article class="card">
+          <p class="card-meta">Founder</p>
+          <h3>NextStep</h3>
+          <p>A college admissions mentorship platform connecting students with mentors who have been through the process.</p>
+          <a class="card-link" href="https://nextstepmentor.io">Visit nextstepmentor.io</a>
+        </article>
+        <article class="card">
+          <p class="card-meta">Co-Founder</p>
+          <h3>Golden Rectangle Club (GRC)</h3>
+          <p>An outdoor fitness organization I co-founded to bring people together around training outside.</p>
+        </article>
+        <article class="card">
+          <p class="card-meta">Independent Project</p>
+          <h3>WHOOP Competitive Intelligence</h3>
+          <p>An AI-assisted competitive analysis of WHOOP versus Oura, Garmin, and Apple in the wearables market.</p>
+        </article>
+        <article class="card placeholder">
+          <p class="card-meta">[PLACEHOLDER: Role · Dates]</p>
+          <h3>[PLACEHOLDER: Organization]</h3>
+          <p>[PLACEHOLDER: Add an internship, job, or activity here.]</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container reveal">
+      <h2>Skills &amp; Interests</h2>
+      <ul class="tags">
+        <li>Finance</li>
+        <li>Entrepreneurship</li>
+        <li>AI in Business</li>
+        <li>Business Analytics</li>
+        <li>Marketing</li>
+        <li>Startups</li>
+        <li class="placeholder">[PLACEHOLDER: Add skill]</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container reveal">
+      <h2>Contact</h2>
+      <p>I'm always open to connecting with recruiters, collaborators, and fellow builders.</p>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <span class="placeholder">[PLACEHOLDER: your email]</span></li>
+        <li><strong>LinkedIn:</strong> <span class="placeholder">[PLACEHOLDER: your LinkedIn URL]</span></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/dschwedelson">github.com/dschwedelson</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="container">© <span id="year">2026</span> Drew Schwedelson · Built with GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
